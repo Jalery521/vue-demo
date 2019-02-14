@@ -50,9 +50,8 @@
             <th style="width:200px">操作</th>
           </tr>
         </thead>
-        <tbody>
-          <tr v-if="postsList.length"
-              v-for="item in postsList"
+        <tbody v-if="postsList.length">
+          <tr v-for="item in postsList"
               :key="item.id">
             <td style="width:120px"><input @click="checkOne(item)"
                      :checked="item.checkBoole"

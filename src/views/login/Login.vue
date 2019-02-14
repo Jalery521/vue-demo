@@ -53,8 +53,8 @@ export default {
       this.axios.post('account/checkUser', { username: this.userName, password: this.password }).then(res => {
         if (res.state === 1) {
           sessionStorage.setItem("token", res.token)
-          bus.$emit('infoChange', res.data)
           sessionStorage.setItem('userInfo', JSON.stringify(res.data))
+          bus.$emit('infoChange', res.data)
           this.$router.push('/home')
         } else {
           alert(res.message)
@@ -67,11 +67,9 @@ export default {
 
 <style scoped lang="less">
 .login_bg {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
   background-color: #2f4050;
   .login_box {
     position: absolute;

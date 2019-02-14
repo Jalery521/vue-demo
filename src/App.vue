@@ -1,33 +1,18 @@
 <template>
   <div id="app">
-    <LeftNavBar></LeftNavBar>
-    <div class="right_content">
-      <top-menu></top-menu>
-      <router-view></router-view>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import LeftNavBar from './components/leftNavBar/LeftNavBar.vue'
-  import TopMenu from './components/topMenu/TopMenu'
-  export default {
-    name: 'app',
-    components: {
-      LeftNavBar,
-      TopMenu
-    },
-    
-  }
+export default {
+  name: 'app'
+}
 </script>
 <style lang="less">
-@import 'assets/css/common.less';
-  #app {
-    height: 100%;
-    width: 100%;
-    display: flex;
-  }
-  .right_content {
-    flex:1;
-  }
+@import "assets/css/common.less";
+#app {
+  width: 100%;
+  height: 100%;
+}
 </style>

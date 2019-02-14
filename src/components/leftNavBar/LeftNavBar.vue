@@ -189,7 +189,6 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
-
   > .admin_icon {
     width: 100%;
     height: 177px;
