@@ -75,17 +75,9 @@ export default {
         iconLeft: 'fa fa-cogs',
         iconRight: ['fa fa-angle-right', 'fa fa-angle-down'],
         children: [{
-          subtitle: "数据图表",
+          subtitle: "数据总览",
           selectBoole: false,
           path: "/settings/chart"
-        }, {
-          subtitle: "图片轮播",
-          selectBoole: false,
-          path: "/settings/slider"
-        }, {
-          subtitle: "网站设置",
-          selectBoole: false,
-          path: "/setting/sites"
         }]
       }]
     }
@@ -171,12 +163,6 @@ export default {
           break
         case "/settings/chart":
           this.changeSelectState(4, 0)
-          break
-        case "/settings/slider":
-          this.changeSelectState(4, 1)
-          break
-        case "/settings/sites":
-          this.changeSelectState(4, 2)
       }
     }
   }
