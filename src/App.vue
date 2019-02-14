@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <LeftNavBar></LeftNavBar>
+    <div class="right_content">
+      <top-menu></top-menu>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  import LeftNavBar from './components/leftNavBar/LeftNavBar.vue'
+  import TopMenu from './components/topMenu/TopMenu'
+  export default {
+    name: 'app',
+    components: {
+      LeftNavBar,
+      TopMenu
+    },
+    
   }
-}
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="less">
+@import 'assets/css/common.less';
+  #app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  .right_content {
+    flex:1;
+  }
 </style>
