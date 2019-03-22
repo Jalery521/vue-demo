@@ -31,6 +31,8 @@ export default {
       iconUrl: require("../../assets/img/default.png"),
       userName: '',
       password: null,
+      startY: 0,
+      endY: 0
     }
   },
   methods: {
@@ -60,7 +62,7 @@ export default {
           alert(res.message)
         }
       })
-    }
+    },
   }
 }
 </script>

@@ -1,3 +1,4 @@
+import router from '../routers/Routers.js'
 class Axios {
   constructor(baseUrl) {
     this.baseUrl = baseUrl
@@ -11,7 +12,7 @@ class Axios {
       if (this.xhr.status === 200) {
         const res = JSON.parse(this.xhr.responseText)
         if (res.state === 401) {
-          location.hash = '#/login'
+          router.push('/login')
         } else {
           resolve(res)
         }

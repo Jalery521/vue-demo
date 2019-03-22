@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "echarts": "^4.2.0-rc.2",
+    "element-ui": "^2.6.1",
     "vue": "^2.5.21"
   },
   "devDependencies": {
